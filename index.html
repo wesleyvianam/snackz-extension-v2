@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/styles/default.css">
+    <link rel="stylesheet" href="/src/styles/auth.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <title>Snackz</title>
 </head>
 <body style="width: 300px;">
-    <div>
+    <div id="app">
         <header class="header">
             <a class="home" href="#">
                 <i class="ri-home-2-fill"></i>
@@ -17,6 +18,38 @@
             <h1>Snackz BETA</h1>
             (S)
         </header>
+
+        <!-- Login Form -->
+        <div class="login" v-if="!isLoggedIn">
+            <h2>Login</h2>
+            <form @submit.prevent="login">
+                <label for="email">Username:</label>
+                <input type="text" id="email" v-model="email" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" v-model="password" required>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    
+        <!-- Home Page -->
+        <div v-else>
+          <h2>Bem-vindo à Home</h2>
+          <p>Token: {{ token }}</p>
+          <button @click="logout">Logout</button>
+        </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <!-- <div>
+        <div class="login">
+            <form action="">
+                
+            </form>
+        </div>
+    </div> -->
+
+    <script src="/src/scripts/auth.js"></script>
 </body>
 </html>

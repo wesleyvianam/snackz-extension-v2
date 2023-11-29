@@ -1,0 +1,10 @@
+.login .input{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.input input {
+    width: 100%;
+}
