@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/styles/default.css">
     <link rel="stylesheet" href="/src/styles/auth.css">
+    <link rel="stylesheet" href="/src/styles/home.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <title>Snackz</title>
@@ -22,6 +23,7 @@
             </a>
         </header>
 
+        <!-- LOGIN -->
         <div class="login" v-if="!isLoggedIn">
             <form @submit.prevent="login">
                 <div>
@@ -69,11 +71,46 @@
             </form>
         </div>
     
-        <!-- Home Page -->
-        <div v-else>
-          <h2>Bem-vindo à Home</h2>
-          <p>Token: {{ token }}</p>
-          <button @click="logout">Logout</button>
+        <!-- Home -->
+        <div class="home" v-else>
+            <form action="">
+                <input type="text" value="Wesley Viana" disabled />
+                <br>
+                <br>
+                <div>
+                    <span><strong>pão: </strong></span> <br>
+                    <div>
+                        <label for="Francês">Francês</label>
+                        <input type="radio" name="pao" id="mussarela">
+                    </div>
+                    <div>
+                        <label for="doce">Doce</label>
+                        <input type="radio" name="pao" id="doce">
+                    </div>
+                    <div>
+                        <label for="creme">C/ Creme</label>
+                        <input type="radio" name="pao" id="creme">
+                    </div>
+                </div>
+    
+                <br>
+
+                <div>
+                    <span><strong>Acompanhamento: </strong></span> <br>
+                    <div>
+                        <label for="Francês">Mussarela</label>
+                        <input type="radio" name="pao" id="mussarela">
+                    </div>
+                    <div>
+                        <label for="doce">Mortadela</label>
+                        <input type="radio" name="pao" id="doce">
+                    </div>
+                </div>
+
+                <button class="pedir" type="submit">Pedir</button>
+            </form>
+          
+            <!-- <button @click="logout">Sair</button> -->
         </div>
     </div>
 

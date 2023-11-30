@@ -1,0 +1,9 @@
+.home .pedir {
+    width: 100%;
+    border: none;
+    padding: .5rem;
+    border-radius: 1rem;
+    color: white;
+    background-color: #ef4444;
+    margin: 10px 0;
+}

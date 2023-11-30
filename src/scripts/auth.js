@@ -24,7 +24,7 @@ new Vue({
 
                 if (response.ok) {
                     const data = await response.json();
-
+                    console.log(data)
                     const token = data.token.plainTextToken;
 
                     console.log(token)
