@@ -9,27 +9,63 @@
 
     <title>Snackz</title>
 </head>
-<body style="width: 300px;">
+<body>
     <div id="app">
         <header class="header">
-            <a class="home" href="#">
-                <i class="ri-home-2-fill"></i>
+            <h1 class="logo">
+                Snackz 
+                <small class="beta">BETA</small>
+            </h1>
+            
+            <a class="home" href="https://www.snackz.online/home" target="_blank">
+                <i class="ri-home-line"></i>
             </a>
-            <h1>Snackz BETA</h1>
-            (S)
         </header>
 
-        <!-- Login Form -->
         <div class="login" v-if="!isLoggedIn">
-            <h2>Login</h2>
             <form @submit.prevent="login">
-                <label for="email">Username:</label>
-                <input type="text" id="email" v-model="email" required>
-                <br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" v-model="password" required>
-                <br>
-                <button type="submit">Login</button>
+                <div>
+                    <label for="email">Email:</label>
+                    
+                    <div class="input">
+                        <i class="ri-mail-fill icon"></i>
+                        <input type="text" 
+                            id="email" 
+                            v-model="email" 
+                            required
+                            placeholder="Seu email">
+                    </div>
+                </div>
+                
+
+                <div>
+                    <label for="password">Password:</label>
+
+                    <div class="input">
+                        <i class="ri-key-2-line icon"></i>
+                        <input type="password" 
+                            id="password" 
+                            v-model="password" 
+                            required
+                            placeholder="Sua senha">
+                        <i class="ri-eye-close-line icon"></i>
+                    </div>
+                </div>
+
+                <div class="forgot">
+                    <a class="link" href="https://www.snackz.online/forgot-password" target="_blank">
+                        Esqueceu a senha?
+                    </a>
+                </div>
+
+                <button class="button" type="submit">
+                    Login
+                </button>
+
+                <p class="register">
+                    Ainda não possue conta?
+                    <a class="link" href="https://www.snackz.online/register" target="_blank">Registre-se</a>
+                </p>
             </form>
         </div>
     
@@ -40,16 +76,8 @@
           <button @click="logout">Logout</button>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-
-    <!-- <div>
-        <div class="login">
-            <form action="">
-                
-            </form>
-        </div>
-    </div> -->
-
     <script src="/src/scripts/auth.js"></script>
 </body>
 </html>

@@ -1,10 +1,85 @@
+.login {
+    padding: 2.5rem 0;
+}
+
 .login .input{
     display: flex;
     align-items: center;
     width: 100%;
     border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 0 8px;
+    margin-bottom: .5rem;
 }
 
 .input input {
     width: 100%;
+    font-size: 16px;
+    padding: .6rem;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+input:focus {
+    border: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+  }
+
+  input:-moz-placeholder {
+    background-color: transparent !important;
+    color: inherit !important;
+  }
+
+.input .icon {
+    font-size: 18px;
+    color: #474646;
+}
+
+.login .forgot {
+    font-size: 13px;
+    text-align: end;
+    padding-bottom: .5rem;
+}
+
+.forgot .link {
+    color: #474646;   
+}
+
+.forgot .link:hover {
+    color: #2c2a2a;   
+}
+
+.login .button {
+    margin-top: .3rem;
+    padding: .7rem;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: #ef4444;
+    color: white;
+}
+
+.login .button:hover {
+    background-color: #e63636;
+}
+
+
+.login .register {
+    font-size: 13px;
+    padding-top: 1rem;
+}
+
+.register .link {
+    color: #474646;
+}
+
+.register .link:hover {
+    color: #2c2a2a;
 }
