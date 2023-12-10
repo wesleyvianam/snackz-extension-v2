@@ -10,41 +10,7 @@
 
 body {
     margin: auto;
-    padding: 1rem 1.5rem 1.5rem;
+    padding: 0 1.5rem 1.5rem;
     border: 1px solid #ccc;
     width: 400px;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header .home {
-    border-radius: 6px;
-    color: white;
-    background-color: #ef4444;
-    padding: .4rem;
-    text-decoration: none;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-}
-
-.header .home:hover {
-    background-color: #df2f2f;
-}
-
-.header .logo {
-    font-size: 26px;
-    font-weight: 500;
-    font-family: 'Figtree', sans-serif;
-    color: #ef4444;
-}
-
-.header .logo .beta {
-    font-size: 16px;
-    font-weight: 400;
-    color: rgb(36, 35, 35);
 }

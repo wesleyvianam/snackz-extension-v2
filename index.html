@@ -12,19 +12,15 @@
 </head>
 <body>
     <div id="app">
-        <header class="header">
-            <h1 class="logo">
-                Snackz 
-                <small class="beta">BETA</small>
-            </h1>
-            
-            <a class="home" href="https://www.snackz.online/home" target="_blank">
-                <i class="ri-home-line"></i>
-            </a>
-        </header>
-
         <!-- LOGIN -->
         <div class="login" v-if="!isLoggedIn">
+            <header>
+                <h1 class="logo">
+                    Snackz 
+                    <small class="beta">BETA</small>
+                </h1>
+            </header>
+
             <form @submit.prevent="login">
                 <div>
                     <label for="email">Email:</label>
@@ -73,6 +69,17 @@
     
         <!-- Home -->
         <div class="home" v-else>
+            <header class="header">
+                <h1 class="logo">
+                    Snackz 
+                    <small class="beta">BETA</small>
+                </h1>
+                
+                <a class="home" href="https://www.snackz.online/home" target="_blank">
+                    <i class="ri-home-line"></i>
+                </a>
+            </header>
+
             <form action="">
                 <input type="text" value="Wesley Viana" disabled />
                 <br>
