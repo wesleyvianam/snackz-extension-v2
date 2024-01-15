@@ -31,6 +31,8 @@ new Vue({
 
                     sessionStorage.setItem('token', token);
 
+                    getOptions();           
+
                     this.isLoggedIn = true;
                     this.token = token;
                 } else {
@@ -58,3 +60,22 @@ new Vue({
         }
     },
 });
+
+async function getOptions() {
+    const storedToken = sessionStorage.getItem('token');
+    try {
+        const response = await fetch('http://127.0.0.1:8000/api/options', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': storedToken,
+            },
+        });
+        console.log(response);
+        const data = await response.json();
+        console.log(data)
+        this.categorias = data; // Assumindo que a resposta é um array de objetos com a propriedade "nome"
+    } catch (error) {
+        console.error('Erro ao buscar categorias:', error);
+    }
+}
